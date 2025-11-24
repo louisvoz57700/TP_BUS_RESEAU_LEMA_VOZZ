@@ -33,3 +33,19 @@ Les fonctions sont données page 22 :
  <img width="1184" height="718" alt="image" src="https://github.com/user-attachments/assets/d74e283e-354a-47ce-916a-c790aa5e2566" />
 
 **2.2. Setup du STM32**
+/* USER CODE BEGIN 0 */
+int __io_putchar(int chr)
+{
+	HAL_UART_Transmit(&huart2, (uint8_t*)&chr, 1, HAL_MAX_DELAY);
+	return chr;
+}
+/* USER CODE END 0 */
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+  MX_I2C1_Init();
+  /* USER CODE BEGIN 2 */
+  printf("Bonjour Antonio y Louis\r\n");
+  /* USER CODE END 2 */
+<img width="458" height="140" alt="image" src="https://github.com/user-attachments/assets/927dc102-edb2-4256-abe4-cf5be4d48baa" />
+
