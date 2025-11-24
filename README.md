@@ -28,4 +28,8 @@ Pour se mettre en mode normal , on met mode = 0b01
 
 7. les registres contenant la pression (ainsi que le format)
 De même que pour la température, pour la pression il faudra lire les registres 0XF8 et 0xF7
-8. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
+8. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits. :
+Les fonctions sont données page 22 :
+ <img width="1184" height="718" alt="image" src="https://github.com/user-attachments/assets/d74e283e-354a-47ce-916a-c790aa5e2566" />
+
+
