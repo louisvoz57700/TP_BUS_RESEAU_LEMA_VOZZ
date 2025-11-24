@@ -23,5 +23,8 @@ Pour se mettre en mode normal , on met mode = 0b01
    On lit l'adresse de calibration de 0xA1 à 0x88.
 
 5. les registres contenant la température (ainsi que le format)
-6. les registres contenant la pression (ainsi que le format)
-7. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
+ <img width="1098" height="460" alt="image" src="https://github.com/user-attachments/assets/5d940431-123b-497b-a349-7d6bad3d244e" />
+ On relève 0xFA et oxFB
+
+7. les registres contenant la pression (ainsi que le format)
+8. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
