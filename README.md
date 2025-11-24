@@ -53,3 +53,4 @@ int __io_putchar(int chr)
 ```
 <img width="458" height="140" alt="image" src="https://github.com/user-attachments/assets/927dc102-edb2-4256-abe4-cf5be4d48baa" />
 
+**2.3. Communication I²C**
