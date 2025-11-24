@@ -54,3 +54,15 @@ int __io_putchar(int chr)
 <img width="458" height="140" alt="image" src="https://github.com/user-attachments/assets/927dc102-edb2-4256-abe4-cf5be4d48baa" />
 
 **2.3. Communication I²C**
+Communication avec le BMP280
+Identification du BMP280
+
+L'identification du BMP280 consiste en la lecture du registre ID
+
+En I²C, la lecture se déroule de la manière suivante:
+
+envoyer l'adresse du registre ID
+recevoir 1 octet correspondant au contenu du registre
+Vérifiez que le contenu du registre correspond bien à la datasheet.
+Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
+
