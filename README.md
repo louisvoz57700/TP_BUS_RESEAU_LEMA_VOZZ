@@ -32,4 +32,4 @@ De même que pour la température, pour la pression il faudra lire les registres
 Les fonctions sont données page 22 :
  <img width="1184" height="718" alt="image" src="https://github.com/user-attachments/assets/d74e283e-354a-47ce-916a-c790aa5e2566" />
 
-
+###2.2. Setup du STM32
