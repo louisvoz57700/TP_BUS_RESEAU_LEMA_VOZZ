@@ -50,5 +50,6 @@ int __io_putchar(int chr)
   /* USER CODE BEGIN 2 */
   printf("Bonjour Antonio y Louis\r\n");
   /* USER CODE END 2 */
+```
 <img width="458" height="140" alt="image" src="https://github.com/user-attachments/assets/927dc102-edb2-4256-abe4-cf5be4d48baa" />
 
