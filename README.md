@@ -9,6 +9,7 @@ Objectif: Interfacer un STM32 avec des capteurs I2C
 1. les adresses I²C possibles pour ce composant.
    
 2. le registre et la valeur permettant d'identifier ce composant
+
 Comme on peut le voir grâce à la BIT MAP, l'identification se trouve dans le registre "id" visible à l'adresse 0xD0
 4. le registre et la valeur permettant de placer le composant en mode normal
 5. les registres contenant l'étalonnage du composant
