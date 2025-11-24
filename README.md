@@ -33,6 +33,7 @@ Les fonctions sont données page 22 :
  <img width="1184" height="718" alt="image" src="https://github.com/user-attachments/assets/d74e283e-354a-47ce-916a-c790aa5e2566" />
 
 **2.2. Setup du STM32**
+```c
 /* USER CODE BEGIN 0 */
 int __io_putchar(int chr)
 {
@@ -40,6 +41,8 @@ int __io_putchar(int chr)
 	return chr;
 }
 /* USER CODE END 0 */
+
+
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
