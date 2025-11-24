@@ -64,14 +64,21 @@ En I²C, la lecture se déroule de la manière suivante:
 envoyer l'adresse du registre ID
 recevoir 1 octet correspondant au contenu du registre :
 ```c
-uint8_t reg = 0xD0;   // Adresse du registre ID
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+uint8_t BMP280_ADDR = 0x77 << 1;         // Adresse I2C shiftée
+uint8_t BMP280_REG_ID = 0xD0;           // Adresse du registre ID
+/* USER CODE END PD */
+
+  // Id identification
+
   uint8_t id = 0;
   HAL_StatusTypeDef status;
 
-  status = HAL_I2C_Master_Transmit(&hi2c1, 0x77 << 1, &reg, 1, HAL_MAX_DELAY);
+  status = HAL_I2C_Master_Transmit(&hi2c1, BMP280_ADDR, &BMP280_REG_ID, 1, HAL_MAX_DELAY);
 
   if (status == HAL_OK) {
-      status = HAL_I2C_Master_Receive(&hi2c1, 0x77 << 1, &id, 1, HAL_MAX_DELAY);
+      status = HAL_I2C_Master_Receive(&hi2c1, BMP280_ADDR, &id, 1, HAL_MAX_DELAY);
   }
 
   if (status == HAL_OK) {
@@ -79,6 +86,7 @@ uint8_t reg = 0xD0;   // Adresse du registre ID
   } else {
       printf("Erreur I2C lors de la lecture du registre ID\r\n");
   }
+
 ```
 <img width="454" height="144" alt="image" src="https://github.com/user-attachments/assets/10df4822-dcc1-49a7-aa4f-edeee5d9ce29" />
 
