@@ -6,7 +6,8 @@ Objectif: Interfacer un STM32 avec des capteurs I2C
 
 À partir de la datasheet du [BMP280](https://moodle.ensea.fr/mod/resource/view.php?id=19907), identifiez les éléments suivants:
 
-1. les adresses I²C possibles pour ce composant.
+1. les adresses I²C possibles pour ce composant : Page 28 de la datasheet : On a 7 bits d'adresses dont 6 fixées 111011x. Le dernier bit correspond à la connexion avec SDO. Sur la carte on relève 0x77  donc le SDO est connecté au VDDIO et donc le dernier bit est à 1 donc on a 1110111.
+   
    
 2. le registre et la valeur permettant d'identifier ce composant
 
