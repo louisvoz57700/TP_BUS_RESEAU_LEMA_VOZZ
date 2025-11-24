@@ -10,12 +10,18 @@ Objectif: Interfacer un STM32 avec des capteurs I2C
    
    
 2. le registre et la valeur permettant d'identifier ce composant :
-Comme on peut le voir grâce à la BIT MAP, l'identification se trouve dans le registre "id" visible à l'adresse 0xD0
+Comme on peut le voir grâce à la Memory MAP, l'identification se trouve dans le registre "id" visible à l'adresse 0xD0
 4. le registre et la valeur permettant de placer le composant en mode normal
+
+On peut activer / skipped la measure de la pression en écrivant dans le registre 0xF4 : osrs_t + osrs_p + mode
+Pour avoir une mesure de la température avec un oversampling de *1 , on met osrs_t = 0b001
+Pour avoir une mesure de la pression avec un oversampling de *1 , on met osrs_p = 0b001
+Pour se mettre en mode normal , on met mode = 0b01
+
 5. les registres contenant l'étalonnage du composant :
    <img width="1208" height="474" alt="image" src="https://github.com/user-attachments/assets/7e267f68-d0de-48b2-94b9-70948f23ce14" />
    On lit l'adresse de calibration de 0xA1 à 0x88.
 
-7. les registres contenant la température (ainsi que le format)
+6. les registres contenant la température (ainsi que le format)
 8. les registres contenant la pression (ainsi que le format)
-9. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
+8. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
