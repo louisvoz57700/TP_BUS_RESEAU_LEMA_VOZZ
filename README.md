@@ -83,6 +83,6 @@ uint8_t reg = 0xD0;   // Adresse du registre ID
 <img width="454" height="144" alt="image" src="https://github.com/user-attachments/assets/10df4822-dcc1-49a7-aa4f-edeee5d9ce29" />
 
 Vérifiez que le contenu du registre correspond bien à la datasheet.
-Oui on le voit bien avec la memory map du dessus. C'est bien 0x58
+Oui on le voit bien avec la memory map du dessus. C'est bien 0x58.
 Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 
