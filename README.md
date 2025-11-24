@@ -9,11 +9,13 @@ Objectif: Interfacer un STM32 avec des capteurs I2C
 1. les adresses I²C possibles pour ce composant : Page 28 de la datasheet : On a 7 bits d'adresses dont 6 fixées 111011x. Le dernier bit correspond à la connexion avec SDO. Sur la carte on relève 0x77  donc le SDO est connecté au VDDIO et donc le dernier bit est à 1 donc on a 1110111.
    
    
-2. le registre et la valeur permettant d'identifier ce composant
-
+2. le registre et la valeur permettant d'identifier ce composant :
 Comme on peut le voir grâce à la BIT MAP, l'identification se trouve dans le registre "id" visible à l'adresse 0xD0
 4. le registre et la valeur permettant de placer le composant en mode normal
-5. les registres contenant l'étalonnage du composant
-6. les registres contenant la température (ainsi que le format)
-7. les registres contenant la pression (ainsi que le format)
-8. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
+5. les registres contenant l'étalonnage du composant :
+   <img width="1208" height="474" alt="image" src="https://github.com/user-attachments/assets/7e267f68-d0de-48b2-94b9-70948f23ce14" />
+   On lit l'adresse de calibration de 0xA1 à 0x88.
+
+7. les registres contenant la température (ainsi que le format)
+8. les registres contenant la pression (ainsi que le format)
+9. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
