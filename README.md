@@ -27,4 +27,5 @@ Pour se mettre en mode normal , on met mode = 0b01
  On relève 0xFA et oxFB
 
 7. les registres contenant la pression (ainsi que le format)
+De même que pour la température, pour la pression il faudra lire les registres 0XF8 et 0xF7
 8. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits.
