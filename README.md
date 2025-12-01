@@ -96,3 +96,5 @@ Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 
 **Configuration du BMP280**
 
+**TP2**
+**Premier démarrage**
