@@ -1,0 +1,4 @@
+../Core/Src/bmp.c:38:6:INIT_BMP	9
+../Core/Src/bmp.c:91:6:read_value	3
+../Core/Src/bmp.c:106:10:read_temperature_uint	1
+../Core/Src/bmp.c:132:10:read_pressure_uint	3

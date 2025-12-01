@@ -1,0 +1,7 @@
+../Core/Src/ADXL.c:33:19:ADXL343_WriteReg	1
+../Core/Src/ADXL.c:40:19:ADXL343_ReadReg	2
+../Core/Src/ADXL.c:53:19:ADXL343_ReadMulti	2
+../Core/Src/ADXL.c:66:19:ADXL343_Init	9
+../Core/Src/ADXL.c:109:19:ADXL343_ReadXYZ	3
+../Core/Src/ADXL.c:135:19:ADXL343_EnableSingleTap	7
+../Core/Src/ADXL.c:154:6:I2C_ResetBus	2

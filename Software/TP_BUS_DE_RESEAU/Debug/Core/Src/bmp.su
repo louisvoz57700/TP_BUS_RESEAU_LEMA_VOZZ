@@ -1,0 +1,4 @@
+../Core/Src/bmp.c:38:6:INIT_BMP	48	static
+../Core/Src/bmp.c:91:6:read_value	40	static
+../Core/Src/bmp.c:106:10:read_temperature_uint	40	static
+../Core/Src/bmp.c:132:10:read_pressure_uint	352	static
