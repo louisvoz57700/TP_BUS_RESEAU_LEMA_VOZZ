@@ -96,3 +96,15 @@ Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 
 **Configuration du BMP280**
 
+**TP2**
+
+
+**Premier démarrage**
+ssh lemvoz@192.168.4.213
+mdp :lemvoz
+
+on modifie les fichiers config.txt et cmdline.txt
+
+3.2. Port Série
+Loopback
+photo du loopback
