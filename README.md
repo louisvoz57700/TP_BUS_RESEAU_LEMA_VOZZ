@@ -98,3 +98,5 @@ Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 
 **TP2**
 **Premier démarrage**
+ssh lemvoz@192.168.4.213
+mdp :lemvoz
