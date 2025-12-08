@@ -150,3 +150,11 @@ On utilise ici jsonify et on voit que c'est bien détecter en JSON :
 
 <img width="1469" height="613" alt="image" src="https://github.com/user-attachments/assets/0120a5f3-5528-43d7-8e5d-b7d91b0ebbb7" />
 
+On implémente maintenant la page "error 404"
+
+<img width="1470" height="702" alt="image" src="https://github.com/user-attachments/assets/85c13df9-d6fc-4dff-9e77-f74465df2aa2" />
+
+Not allowed pour le moment
+
+<img width="574" height="108" alt="image" src="https://github.com/user-attachments/assets/4f1fa88c-93f4-427f-bab8-af7fb20d771e" />
+
