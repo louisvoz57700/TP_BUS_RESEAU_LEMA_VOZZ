@@ -140,3 +140,13 @@ Comme on peut le voir, nos requêtes sont lu en html mais pas en JSON :
 
 Première route
 
+Après l'ajout des lignes ... on obtient :
+
+<img width="1470" height="680" alt="image" src="https://github.com/user-attachments/assets/f39414a3-ba9d-4c20-ad4a-2e7f4e76a3dc" />
+
+Deuxième route 
+
+On utilise ici jsonify et on voit que c'est bien détecter en JSON :
+
+<img width="1469" height="613" alt="image" src="https://github.com/user-attachments/assets/0120a5f3-5528-43d7-8e5d-b7d91b0ebbb7" />
+
