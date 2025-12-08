@@ -103,6 +103,7 @@ Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 ssh lemvoz@192.168.4.213
 mdp :lemvoz
 
+**4. TP3 - Interface REST**
 on modifie les fichiers config.txt et cmdline.txt
 
 3.2. Port Série
