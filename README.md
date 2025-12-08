@@ -121,4 +121,8 @@ en ajoutant les options :
 On le voit bien aussi sur le navigateur web : 
 <img width="1390" height="405" alt="image" src="https://github.com/user-attachments/assets/d4d96e7c-3a85-4c6b-ae0f-34c3467fccd3" />
 
+4. TP3 - Interface REST
+4.2. Première page REST
+
+Première route
 
