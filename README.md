@@ -112,5 +112,6 @@ on modifie les fichiers config.txt et cmdline.txt
 initialisation : ssh antonio@192.168.4.213
 mdp :antonio
 
+<img width="2266" height="344" alt="image" src="https://github.com/user-attachments/assets/1c351c7b-d574-4291-bd83-e82dc84bc267" />
 
 
