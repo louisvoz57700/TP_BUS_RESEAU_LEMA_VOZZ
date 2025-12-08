@@ -109,5 +109,8 @@ photo du loopback
 
 **4. TP3 - Interface REST**
 on modifie les fichiers config.txt et cmdline.txt
+initialisation : ssh antonio@192.168.4.213
+mdp :antonio
+
 
 
