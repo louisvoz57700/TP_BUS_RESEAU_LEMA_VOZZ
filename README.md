@@ -121,8 +121,17 @@ en ajoutant les options :
 On le voit bien aussi sur le navigateur web : 
 <img width="1390" height="405" alt="image" src="https://github.com/user-attachments/assets/d4d96e7c-3a85-4c6b-ae0f-34c3467fccd3" />
 
+Le rôle de @app.route est de connecter une adresse URL à cette fonction Python. Il crée une route
+
+L'expression <int:index> fait trois choses en même temps :
+Capture : Elle dit "Tout ce qui est écrit à cet endroit précis de l'URL, mets-le dans une variable nommée index".
+Conversion (int) : Elle dit "Transforme ce texte en un nombre entier (integer)". Si l'utilisateur tape "5", Python reçoit le nombre 5 (mathématique), pas le texte "5".
+Filtrage (Sécurité) : C'est le plus important. Si l'utilisateur tape quelque chose qui n'est pas un nombre (par exemple /api/welcome/toto), Flask refusera la connexion (Erreur 404) avant même de lancer votre fonction. Cela protège votre code contre des erreurs.
+
 4. TP3 - Interface REST
 4.2. Première page REST
+
+
 
 Première route
 
