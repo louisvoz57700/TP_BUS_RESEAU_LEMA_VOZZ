@@ -161,3 +161,6 @@ Not allowed pour le moment
 Méthode POST:
 <img width="1370" height="333" alt="image" src="https://github.com/user-attachments/assets/4dc9677c-6408-4483-a57e-05179595efa7" />
 
+Méthode GET :
+
+<img width="1470" height="643" alt="image" src="https://github.com/user-attachments/assets/1a4d72f9-f249-41c8-9f06-6ec5b067270a" />
