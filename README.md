@@ -158,5 +158,6 @@ Not allowed pour le moment
 
 <img width="574" height="108" alt="image" src="https://github.com/user-attachments/assets/4f1fa88c-93f4-427f-bab8-af7fb20d771e" />
 
-<img width="1370" height="333" alt="image" src="https://github.com/user-attachments/assets/4dc9677c-6408-4483-a57e-05179595efa7" />
 Méthode POST:
+<img width="1370" height="333" alt="image" src="https://github.com/user-attachments/assets/4dc9677c-6408-4483-a57e-05179595efa7" />
+
