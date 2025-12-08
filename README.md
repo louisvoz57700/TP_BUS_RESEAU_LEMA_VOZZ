@@ -130,8 +130,12 @@ Filtrage (Sécurité) : C'est le plus important. Si l'utilisateur tape quelque c
 4. TP3 - Interface REST
 4.2. Première page REST
 On aperçcoit bien le welcom et le retour avec l'index :
+
 <img width="578" height="66" alt="Screenshot 2025-12-08 at 3 02 59 PM" src="https://github.com/user-attachments/assets/8bdecfd9-d343-43bc-9755-3e3ca4dbd948" />
 
+Comme on peut le voir, nos requêtes sont lu en html mais pas en JSON :
+
+<img width="1470" height="658" alt="image" src="https://github.com/user-attachments/assets/7d2ba4cd-0190-4c86-a455-c70ccde5778e" />
 
 
 Première route
