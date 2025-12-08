@@ -118,5 +118,7 @@ Sur le deuxième terminal :
 <img width="1019" height="124" alt="image" src="https://github.com/user-attachments/assets/0ca12703-8fc6-459c-b5cd-4f47c698e6d9" />
 en ajoutant les options : 
 <img width="1188" height="377" alt="image" src="https://github.com/user-attachments/assets/17ecbff1-3a14-4bde-afda-face8821cb97" />
+On le voit bien aussi sur le navigateur web : 
+<img width="1390" height="405" alt="image" src="https://github.com/user-attachments/assets/d4d96e7c-3a85-4c6b-ae0f-34c3467fccd3" />
 
 
