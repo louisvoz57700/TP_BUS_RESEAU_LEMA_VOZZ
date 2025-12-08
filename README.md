@@ -168,3 +168,4 @@ Méthode GET :
 Suite méthode POST :
 <img width="1370" height="994" alt="image" src="https://github.com/user-attachments/assets/30bc8888-6075-4b15-97a6-55dc47cba05a" />
 
+méthode :API CRUD
