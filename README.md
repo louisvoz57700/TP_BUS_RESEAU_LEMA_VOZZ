@@ -116,5 +116,7 @@ sur un terminal
 <img width="2266" height="344" alt="image" src="https://github.com/user-attachments/assets/1c351c7b-d574-4291-bd83-e82dc84bc267" />
 Sur le deuxième terminal :
 <img width="1019" height="124" alt="image" src="https://github.com/user-attachments/assets/0ca12703-8fc6-459c-b5cd-4f47c698e6d9" />
+en ajoutant les options : 
+<img width="1188" height="377" alt="image" src="https://github.com/user-attachments/assets/17ecbff1-3a14-4bde-afda-face8821cb97" />
 
 
