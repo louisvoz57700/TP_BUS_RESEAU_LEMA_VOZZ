@@ -169,3 +169,81 @@ Suite méthode POST :
 <img width="1370" height="994" alt="image" src="https://github.com/user-attachments/assets/30bc8888-6075-4b15-97a6-55dc47cba05a" />
 
 méthode :API CRUD
+
+<img width="1370" height="852" alt="image" src="https://github.com/user-attachments/assets/61e4dfec-3552-4827-a9a9-3d0c1e9b9433" />
+'''py
+antonio@LEMVOZ:~/serveur $ cat hello.py 
+from flask import Flask, jsonify, render_template, abort, request
+
+app = Flask(__name__)
+welcome = "Welcome to 3ESE API and antonio y louis!"
+
+@app.route('/api/request/', methods=['GET', 'POST'])
+@app.route('/api/request/<path>', methods=['GET','POST'])
+def api_request(path=None):
+    resp = {
+            "method":   request.method,
+            "url" :  request.url,
+            "path" : path,
+            "args": request.args,
+            "headers": dict(request.headers),
+    }
+    if request.method == 'POST':
+        resp["POST"] = {
+                "data" : request.get_json(),
+                }
+    return jsonify(resp)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
+
+@app.route('/api/welcome/', methods=['GET', 'POST', 'DELETE'])
+def api_welcome_global():
+    global welcome
+    
+    if request.method == 'GET':
+        return jsonify({"val": welcome})
+    
+    elif request.method == 'POST':
+        data = request.get_json()
+        if data and 'val' in data:
+            welcome = data['val']
+            return jsonify({"val": welcome}), 200
+        else:
+            return jsonify({"error": "JSON invalide"}), 400
+
+    elif request.method == 'DELETE':
+        welcome = ""
+        return "", 204
+
+@app.route('/api/welcome/<int:index>', methods=['GET', 'PUT', 'PATCH', 'DELETE'])
+def api_welcome_index(index):
+    global welcome
+    
+    if index >= len(welcome) and request.method != 'PUT':
+        abort(404)
+
+    if request.method == 'GET':
+        return jsonify({"index": index, "val": welcome[index]})
+
+    elif request.method == 'PUT':
+        data = request.get_json()
+        word = data.get('val', '')
+        welcome = welcome[:index] + word + welcome[index:]
+        return jsonify({"val": welcome})
+
+    elif request.method == 'PATCH':
+        data = request.get_json()
+        char = data.get('val', '')
+        if len(char) != 1:
+             return jsonify({"error": "Erreur longueur"}), 400
+        
+        welcome = welcome[:index] + char + welcome[index+1:]
+        return jsonify({"val": welcome})
+
+    elif request.method == 'DELETE':
+        welcome = welcome[:index] + welcome[index+1:]
+        return "", 204
+antonio@LEMVOZ:~/serveur $
+
