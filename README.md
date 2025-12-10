@@ -247,3 +247,39 @@ def api_welcome_index(index):
         return "", 204
 antonio@LEMVOZ:~/serveur $
 
+5. TP4 - Bus CAN
+5.1. Pilotage du moteur
+
+Pour avoir 500kbit/s : 
+<img width="810" height="286" alt="image" src="https://github.com/user-attachments/assets/1ed69093-f502-436e-8cfc-6e36bb2a40de" />
+
+	HAL_CAN_Start(&hcan1);
+
+	CAN_TxHeaderTypeDef TxHeader;
+	uint32_t TxMailbox;
+	uint8_t TxData[8];
+
+
+	TxHeader.StdId = 0x60;
+	TxHeader.ExtId = 0;
+	TxHeader.IDE = CAN_ID_STD;
+	TxHeader.RTR = CAN_RTR_DATA;
+	TxHeader.DLC = 3;
+	TxHeader.TransmitGlobalTime = DISABLE;
+
+	dans le while : 
+	TxData[0] = 0x00;
+		TxData[1] = 0xB4;
+		TxData[2] = 0x01;
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
+
+		HAL_Delay(1000);
+
+		TxData[0] = 0x01;
+		TxData[1] = 0xB4;
+		TxData[2] = 0x01;
+
+		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
+		HAL_Delay(1000);
+
+   
