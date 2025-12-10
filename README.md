@@ -282,4 +282,4 @@ Pour avoir 500kbit/s :
 		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
 		HAL_Delay(1000);
 
-   
+   On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
