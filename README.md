@@ -111,6 +111,32 @@ mdp :lemvoz
 Loopback
 photo du loopback
 
+Communication avec la STM32 :
+
+```c
+void PARSE(uint8_t* buffer, uint8_t size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (buffer[i] == 'G' && buffer[i + 1] == 'E' && buffer[i + 2] == 'T' && buffer[i + 3] == '_')
+		{
+			if (buffer[i + 4] == 'T')
+			{
+				char ligne[30];
+				int len = snprintf(ligne, sizeof(ligne), "Valeur de T:%.2f \r\n", temp1);
+				HAL_UART_Transmit(&huart1, (uint8_t*)ligne, len, 10);
+
+			}
+			if (buffer[i + 4] == 'P')
+			{
+				char ligne[30];
+				int len = snprintf(ligne, sizeof(ligne), "Valeur de P:%.2f \r\n", pres1);
+				HAL_UART_Transmit(&huart1, (uint8_t*)ligne, len, 10);
+			}
+		}
+	}
+}
+```
 **4. TP3 - Interface REST**
 on modifie les fichiers config.txt et cmdline.txt
 initialisation : ssh antonio@192.168.4.213
@@ -300,27 +326,3 @@ En s'aidant d'une IA, on arrive à créer une page html qui va pouvoir intérrog
 et on va voir la valeur sur notre page web.
 Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T et il va répondre avec la température actuelle.
 
-```c
-void PARSE(uint8_t* buffer, uint8_t size)
-{
-	for (int i = 0; i < size; i++)
-	{
-		if (buffer[i] == 'G' && buffer[i + 1] == 'E' && buffer[i + 2] == 'T' && buffer[i + 3] == '_')
-		{
-			if (buffer[i + 4] == 'T')
-			{
-				char ligne[30];
-				int len = snprintf(ligne, sizeof(ligne), "Valeur de T:%.2f \r\n", temp1);
-				HAL_UART_Transmit(&huart1, (uint8_t*)ligne, len, 10);
-
-			}
-			if (buffer[i + 4] == 'P')
-			{
-				char ligne[30];
-				int len = snprintf(ligne, sizeof(ligne), "Valeur de P:%.2f \r\n", pres1);
-				HAL_UART_Transmit(&huart1, (uint8_t*)ligne, len, 10);
-			}
-		}
-	}
-}
-```
