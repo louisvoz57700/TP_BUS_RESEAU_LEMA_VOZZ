@@ -1,40 +1,40 @@
 # TP_BUS_RESEAU_LEMA_VOZZ
 Voici le compte-rendu de nos TP en bus et réseau de Lemarignier et Vozzola
-### **TP 1 - Bus I2C**
+## **TP 1 - Bus I2C**
 
 Objectif: Interfacer un STM32 avec des capteurs I2C
 
 À partir de la datasheet du [BMP280](https://moodle.ensea.fr/mod/resource/view.php?id=19907), identifiez les éléments suivants:
 
-1. les adresses I²C possibles pour ce composant : Page 28 de la datasheet : On a 7 bits d'adresses dont 6 fixées 111011x. Le dernier bit correspond à la connexion avec SDO. Sur la carte on relève 0x77  donc le SDO est connecté au VDDIO et donc le dernier bit est à 1 donc on a 1110111.
+###1. les adresses I²C possibles pour ce composant : Page 28 de la datasheet : On a 7 bits d'adresses dont 6 fixées 111011x. Le dernier bit correspond à la connexion avec SDO. Sur la carte on relève 0x77  donc le SDO est connecté au VDDIO et donc le dernier bit est à 1 donc on a 1110111.
    
    
-2. le registre et la valeur permettant d'identifier ce composant :
+###2. le registre et la valeur permettant d'identifier ce composant :
 Comme on peut le voir grâce à la Memory MAP, l'identification se trouve dans le registre "id" visible à l'adresse 0xD0
-3. le registre et la valeur permettant de placer le composant en mode normal
+###3. le registre et la valeur permettant de placer le composant en mode normal
 
 On peut activer / skipped la measure de la pression en écrivant dans le registre 0xF4 : osrs_t + osrs_p + mode
 Pour avoir une mesure de la température avec un oversampling de *1 , on met osrs_t = 0b001
 Pour avoir une mesure de la pression avec un oversampling de *1 , on met osrs_p = 0b001
 Pour se mettre en mode normal , on met mode = 0b01
 
-4. les registres contenant l'étalonnage du composant :
+###4. les registres contenant l'étalonnage du composant :
    <img width="1208" height="474" alt="image" src="https://github.com/user-attachments/assets/7e267f68-d0de-48b2-94b9-70948f23ce14" />
    On lit l'adresse de calibration de 0xA1 à 0x88.
 
-5. les registres contenant la température (ainsi que le format)
+###5. les registres contenant la température (ainsi que le format)
  <img width="1098" height="460" alt="image" src="https://github.com/user-attachments/assets/5d940431-123b-497b-a349-7d6bad3d244e" />
  On relève 0xFA et oxFB
 
-6. les registres contenant la pression (ainsi que le format)
+###6. les registres contenant la pression (ainsi que le format)
 De même que pour la température, pour la pression il faudra lire les registres 0XF8 et 0xF7
 <img width="1110" height="494" alt="image" src="https://github.com/user-attachments/assets/ebcfc410-13e2-41a5-ab1f-3b527d708f36" />
 
-7. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits. :
+###7. les fonctions permettant le calcul de la température et de la pression compensées, en format entier 32 bits. :
 Les fonctions sont données page 22 :
  <img width="1184" height="718" alt="image" src="https://github.com/user-attachments/assets/d74e283e-354a-47ce-916a-c790aa5e2566" />
 
-**2.2. Setup du STM32**
+### 2.2. Setup du STM32
 On va juste chercher à print nos prénoms, on redéfinit putchar avec le bon huart ici, c'est le 2.
 ```c
 /* USER CODE BEGIN 0 */
@@ -56,7 +56,7 @@ int __io_putchar(int chr)
 ```
 <img width="458" height="140" alt="image" src="https://github.com/user-attachments/assets/927dc102-edb2-4256-abe4-cf5be4d48baa" />
 
-**2.3. Communication I²C**
+### 2.3. Communication I²C
 Communication avec le BMP280
 Identification du BMP280
 
@@ -107,7 +107,7 @@ Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 ssh lemvoz@192.168.4.213
 mdp :lemvoz
 
-3.2. Port Série
+### 3.2. Port Série
 Loopback
 photo du loopback
 
@@ -137,7 +137,7 @@ void PARSE(uint8_t* buffer, uint8_t size)
 	}
 }
 ```
-**4. TP3 - Interface REST**
+## 4. TP3 - Interface REST**
 on modifie les fichiers config.txt et cmdline.txt
 initialisation : ssh antonio@192.168.4.213
 mdp :antonio
@@ -157,8 +157,8 @@ L'expression <int:index> fait trois choses en même temps :
 Capture : Elle dit "Tout ce qui est écrit à cet endroit précis de l'URL, mets-le dans une variable nommée index".
 Conversion (int) : Elle dit "Transforme ce texte en un nombre entier (integer)". Si l'utilisateur tape "5", Python reçoit le nombre 5 (mathématique), pas le texte "5".
 Filtrage (Sécurité) : C'est le plus important. Si l'utilisateur tape quelque chose qui n'est pas un nombre (par exemple /api/welcome/toto), Flask refusera la connexion (Erreur 404) avant même de lancer votre fonction. Cela protège votre code contre des erreurs.
-4. TP3 - Interface REST
-4.2. Première page REST
+
+### 4.2. Première page REST
 On aperçcoit bien le welcom et le retour avec l'index :
 
 <img width="578" height="66" alt="Screenshot 2025-12-08 at 3 02 59 PM" src="https://github.com/user-attachments/assets/8bdecfd9-d343-43bc-9755-3e3ca4dbd948" />
@@ -285,8 +285,8 @@ On peut tester nos méthodes HTTP :
 
 
 
-5. TP4 - Bus CAN
-5.1. Pilotage du moteur
+## 5. TP4 - Bus CAN
+### 5.1. Pilotage du moteur
 
 Pour avoir 500kbit/s : 
 
@@ -324,7 +324,7 @@ Pour avoir 500kbit/s :
 ```
    On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
 
-6. TP5 - Rassemblement
+## 6. TP5 - Rassemblement
    
 En s'aidant d'une IA, on arrive à créer une page html qui va pouvoir intérroger le STM32. Le stm32 va répondre avec la température/pression selon la demande
 et on va voir la valeur sur notre page web.
