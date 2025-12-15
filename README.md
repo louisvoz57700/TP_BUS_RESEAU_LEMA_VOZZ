@@ -35,6 +35,7 @@ Les fonctions sont données page 22 :
  <img width="1184" height="718" alt="image" src="https://github.com/user-attachments/assets/d74e283e-354a-47ce-916a-c790aa5e2566" />
 
 **2.2. Setup du STM32**
+On va juste chercher à print nos prénoms, on redéfinit putchar avec le bon huart ici, c'est le 2.
 ```c
 /* USER CODE BEGIN 0 */
 int __io_putchar(int chr)
