@@ -294,6 +294,7 @@ Pour avoir 500kbit/s :
    On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
 
 6. TP5 - Rassemblement
+   
 En s'aidant d'une IA, on arrive à créer une page html qui va pouvoir intérroger le STM32. Le stm32 va répondre avec la température/pression selon la demande
 et on va voir la valeur sur notre page web.
 Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T et il va répondre avec la température actuelle.
