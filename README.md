@@ -298,11 +298,12 @@ En s'aidant d'une IA, on arrive à créer une page html qui va pouvoir intérrog
 et on va voir la valeur sur notre page web.
 Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T et il va répondre avec la température actuelle.
 
-'void PARSE(uint8_t* buffer,uint8_t size)
+```c
+void PARSE(uint8_t* buffer, uint8_t size)
 {
-	for (int i = 0;i<size;i++)
+	for (int i = 0; i < size; i++)
 	{
-		if (buffer[i]=='G' && buffer[i+1]=='E' && buffer[i+2]=='T' && buffer[i+3]=='_')
+		if (buffer[i] == 'G' && buffer[i + 1] == 'E' && buffer[i + 2] == 'T' && buffer[i + 3] == '_')
 		{
 			if (buffer[i + 4] == 'T')
 			{
@@ -319,4 +320,5 @@ Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T e
 			}
 		}
 	}
-}'
+}
+```
