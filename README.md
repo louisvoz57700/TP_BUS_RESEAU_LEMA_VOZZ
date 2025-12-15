@@ -201,13 +201,13 @@ Suite méthode POST :
 méthode :API CRUD
 
 <img width="1370" height="852" alt="image" src="https://github.com/user-attachments/assets/61e4dfec-3552-4827-a9a9-3d0c1e9b9433" />
-'''py
-antonio@LEMVOZ:~/serveur $ cat hello.py 
+
+
+```
 from flask import Flask, jsonify, render_template, abort, request
 
 app = Flask(__name__)
 welcome = "Welcome to 3ESE API and antonio y louis!"
-```
 @app.route('/api/request/', methods=['GET', 'POST'])
 @app.route('/api/request/<path>', methods=['GET','POST'])
 def api_request(path=None):
