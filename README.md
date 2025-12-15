@@ -108,7 +108,6 @@ uint8_t BMP280_REG_ID = 0xD0;           // Adresse du registre ID
 Vérifiez que le contenu du registre correspond bien à la datasheet:
 
 Oui on le voit bien avec la memory map du dessus. C'est bien 0x58.
-Vérifiez à l'oscilloscope que la formes des trames I²C est conforme.
 
 **Configuration du BMP280**
 
