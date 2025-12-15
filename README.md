@@ -207,7 +207,7 @@ from flask import Flask, jsonify, render_template, abort, request
 
 app = Flask(__name__)
 welcome = "Welcome to 3ESE API and antonio y louis!"
-
+```
 @app.route('/api/request/', methods=['GET', 'POST'])
 @app.route('/api/request/<path>', methods=['GET','POST'])
 def api_request(path=None):
@@ -289,7 +289,7 @@ On peut tester nos méthodes HTTP :
 
 Pour avoir 500kbit/s : 
 <img width="810" height="286" alt="image" src="https://github.com/user-attachments/assets/1ed69093-f502-436e-8cfc-6e36bb2a40de" />
-
+```
 	HAL_CAN_Start(&hcan1);
 
 	CAN_TxHeaderTypeDef TxHeader;
@@ -318,7 +318,7 @@ Pour avoir 500kbit/s :
 
 		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
 		HAL_Delay(1000);
-
+```
    On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
 
 6. TP5 - Rassemblement
