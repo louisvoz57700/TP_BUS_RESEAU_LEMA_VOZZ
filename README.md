@@ -326,4 +326,5 @@ Pour avoir 500kbit/s :
 En s'aidant d'une IA, on arrive à créer une page html qui va pouvoir intérroger le STM32. Le stm32 va répondre avec la température/pression selon la demande
 et on va voir la valeur sur notre page web.
 Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T et il va répondre avec la température actuelle.
-
+[Voir la page](Software/code_API_rest.html)
+<img width="1705" height="849" alt="image" src="https://github.com/user-attachments/assets/640c5225-2e94-4002-89fb-e3b9c2156801" />
