@@ -276,6 +276,7 @@ def api_welcome_index(index):
         welcome = welcome[:index] + welcome[index+1:]
         return "", 204
 antonio@LEMVOZ:~/serveur $
+```
 
 On peut tester nos méthodes HTTP :
 <img width="574" height="105" alt="Screenshot 2025-12-15 at 2 12 03 PM" src="https://github.com/user-attachments/assets/0fb189ab-67ba-4008-8dbf-68dc2590190a" />
