@@ -247,6 +247,12 @@ def api_welcome_index(index):
         return "", 204
 antonio@LEMVOZ:~/serveur $
 
+On peut tester nos méthodes HTTP :
+<img width="574" height="105" alt="Screenshot 2025-12-15 at 2 12 03 PM" src="https://github.com/user-attachments/assets/0fb189ab-67ba-4008-8dbf-68dc2590190a" />
+<img width="554" height="104" alt="Screenshot 2025-12-15 at 2 10 12 PM" src="https://github.com/user-attachments/assets/e20b083e-289f-45c5-bead-06b65747a73e" />
+
+
+
 5. TP4 - Bus CAN
 5.1. Pilotage du moteur
 
