@@ -1,0 +1,4 @@
+../Core/Src/bmp.c:10:6:BMP280_Init	56	static
+../Core/Src/bmp.c:46:6:BMP280_Read_Raw	40	static
+../Core/Src/bmp.c:61:14:bmp280_compensate_T_int32	32	static
+../Core/Src/bmp.c:72:14:bmp280_compensate_P_int64	328	static

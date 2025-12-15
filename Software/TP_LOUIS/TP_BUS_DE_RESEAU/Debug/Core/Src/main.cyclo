@@ -1,0 +1,9 @@
+../Core/Src/main.c:82:5:__io_putchar	1
+../Core/Src/main.c:94:5:main	3
+../Core/Src/main.c:186:6:SystemClock_Config	3
+../Core/Src/main.c:230:6:PARSE	8
+../Core/Src/main.c:253:6:HAL_UART_RxCpltCallback	3
+../Core/Src/main.c:280:6:manual_mode	2
+../Core/Src/main.c:297:6:angle	2
+../Core/Src/main.c:317:6:process_temperature	3
+../Core/Src/main.c:349:6:Error_Handler	1
