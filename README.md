@@ -289,3 +289,8 @@ Pour avoir 500kbit/s :
 		HAL_Delay(1000);
 
    On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
+
+6. TP5 - Rassemblement
+<img width="1698" height="851" alt="image" src="https://github.com/user-attachments/assets/b6a74c25-432e-4977-bad8-2f92a0bc515e" />
+
+   
