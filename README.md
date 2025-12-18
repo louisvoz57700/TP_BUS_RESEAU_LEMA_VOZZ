@@ -311,7 +311,7 @@ https://github.com/user-attachments/assets/54dca179-4a62-4eaa-8a0a-a004caa852ee
 
 
 ## 6. TP5 - Rassemblement
-   
+On regroupe l'ensemble de nos codes.
 En s'aidant d'une IA, on arrive à créer une page html qui va pouvoir intérroger le STM32. Le stm32 va répondre avec la température/pression selon la demande
 et on va voir la valeur sur notre page web.
 Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T et il va répondre avec la température actuelle :
