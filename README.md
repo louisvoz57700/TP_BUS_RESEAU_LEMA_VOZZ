@@ -281,6 +281,8 @@ Commencez par mettre en place un code simple, qui fait bouger le moteur de 90° 
 On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion.
 
 
+https://github.com/user-attachments/assets/54dca179-4a62-4eaa-8a0a-a004caa852ee
+
 
 ## 6. TP5 - Rassemblement
    
