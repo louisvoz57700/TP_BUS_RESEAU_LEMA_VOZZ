@@ -190,6 +190,7 @@ Petite photo des valeurs que nous obtenons, ici en brut mais pour les prochains 
 **Premier fichier Web**
 
 on modifie les fichiers config.txt et cmdline.txt
+
 initialisation : ssh antonio@192.168.4.213
 mdp :antonio
 
