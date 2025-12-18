@@ -1,5 +1,6 @@
 # TP_BUS_RESEAU_LEMA_VOZZ
-Voici le compte-rendu de nos TP en bus et réseaux de Lemarignier et Vozzola
+Voici le compte-rendu de nos TP en bus et réseaux de Lemarignier et Vozzola.
+
 La dernière version du code est ici : https://github.com/louisvoz57700/TP_BUS_RESEAU_LEMA_VOZZ/tree/a2229581cd5c942088ec48e2374f5042c583e567/Software/TP_LOUIS/TP_BUS_DE_RESEAU
 
 ## **TP 1 - Bus I2C**
