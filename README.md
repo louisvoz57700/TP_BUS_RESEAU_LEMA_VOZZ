@@ -263,7 +263,19 @@ On peut tester nos méthodes HTTP :
 <img width="574" height="105" alt="Screenshot 2025-12-15 at 2 12 03 PM" src="https://github.com/user-attachments/assets/0fb189ab-67ba-4008-8dbf-68dc2590190a" />
 <img width="554" height="104" alt="Screenshot 2025-12-15 at 2 10 12 PM" src="https://github.com/user-attachments/assets/e20b083e-289f-45c5-bead-06b65747a73e" />
 
+Résumé de nos compréhensions sur les méthodes : 
 
+GET : pour récupérer et lire. La méthode GET est utilisée pour demander des données au serveur.
+
+POST : pour envoyer des données au serveur.
+
+PUT : pour remplacer une ressource existante.
+
+PATCH : semble proche de PUT mais semble plûtot remplacer.
+
+DELETE : supprimer
+
+Pour les demandes, on pourra donc faire curl -X méthode, description de H et d et puis @route/api/welcome/ et éventuellement avec un index
 
 ##  TP4 - Bus CAN
 ### 5.1. Pilotage du moteur
