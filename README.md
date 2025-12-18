@@ -278,7 +278,9 @@ Commencez par mettre en place un code simple, qui fait bouger le moteur de 90° 
 		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
 		HAL_Delay(1000);
 ```
-On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
+On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion.
+
+
 
 ## 6. TP5 - Rassemblement
    
