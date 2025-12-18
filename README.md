@@ -217,7 +217,7 @@ On aperçcoit bien le welcome et le retour avec l'index :
 
 <img width="578" height="66" alt="Screenshot 2025-12-08 at 3 02 59 PM" src="https://github.com/user-attachments/assets/8bdecfd9-d343-43bc-9755-3e3ca4dbd948" />
 
-Comme on peut le voir, nos requêtes sont lu en html mais pas en JSON :
+Comme on peut le voir, nos requêtes sont lues en html mais pas en JSON :
 
 <img width="1470" height="658" alt="image" src="https://github.com/user-attachments/assets/7d2ba4cd-0190-4c86-a455-c70ccde5778e" />
 
