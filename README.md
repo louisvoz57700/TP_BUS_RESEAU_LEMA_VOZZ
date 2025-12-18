@@ -268,11 +268,13 @@ On peut tester nos méthodes HTTP :
 ##  TP4 - Bus CAN
 ### 5.1. Pilotage du moteur
 
-Pour avoir 500kbit/s : 
+Pour avoir 500kbit/s pour la vitesse CAN, on règle en conséquence dans l'IOC dans le CAN1 les valeurs du time quantum: 
 
 <img width="810" height="286" alt="image" src="https://github.com/user-attachments/assets/1ed69093-f502-436e-8cfc-6e36bb2a40de" />
 
-Commencez par mettre en place un code simple, qui fait bouger le moteur de 90° dans un sens, puis de 90° dans l'autre, avec une période de 1 seconde.
+Commencez par mettre en place un code simple, qui fait bouger le moteur de 90° dans un sens, puis de 90° dans l'autre, avec une période de 1 seconde :
+On utilisera cette datasheet : https://github.com/louisvoz57700/TP_BUS_RESEAU_LEMA_VOZZ/blob/1fa86e8d7999bb4583587c6866a9c4e86809af35/datasheet/moteur%20(1).pdf
+
 ```c
 	HAL_CAN_Start(&hcan1);
 
