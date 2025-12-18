@@ -128,11 +128,14 @@ L'IP a été configurée de cette manière : 192.168.4 est l'identifiant du rés
 
 
 ### 3.2. Port Série
-Loopback
-photo du loopback
+**Loopback**
+photo du loopback : 
+<img width="1146" height="384" alt="image" src="https://github.com/user-attachments/assets/e859f66c-bac8-4323-a354-bc1766bc4d58" />
 
-Communication avec la STM32 :
 
+**Communication avec la STM32 :**
+
+Pour la réception sur la rasperry pi, on crée une fonction parse et un buffer qui traîte la requête suivant la demande de la raspberry.
 ```c
 void PARSE(uint8_t* buffer, uint8_t size)
 {
@@ -157,12 +160,17 @@ void PARSE(uint8_t* buffer, uint8_t size)
 	}
 }
 ```
-## 4. TP3 - Interface REST**
+Petite photo des valeurs que nous obtenons, ici en brut mais pour les prochains TP, les valeurs compensées.  
+### TP3 - Interface REST
+
+**Premier fichier Web**
+
 on modifie les fichiers config.txt et cmdline.txt
 initialisation : ssh antonio@192.168.4.213
 mdp :antonio
-sur un terminal
 
+Créons notre nouveau serveur web : 
+sur un terminal :
 <img width="2266" height="344" alt="image" src="https://github.com/user-attachments/assets/1c351c7b-d574-4291-bd83-e82dc84bc267" />
 Sur le deuxième terminal :
 <img width="1019" height="124" alt="image" src="https://github.com/user-attachments/assets/0ca12703-8fc6-459c-b5cd-4f47c698e6d9" />
@@ -171,15 +179,16 @@ en ajoutant les options :
 On le voit bien aussi sur le navigateur web : 
 <img width="1390" height="405" alt="image" src="https://github.com/user-attachments/assets/d4d96e7c-3a85-4c6b-ae0f-34c3467fccd3" />
 
+**Première route**
+
 Le rôle de @app.route est de connecter une adresse URL à cette fonction Python. Il crée une route
 
-L'expression <int:index> fait trois choses en même temps :
-Capture : Elle dit "Tout ce qui est écrit à cet endroit précis de l'URL, mets-le dans une variable nommée index".
-Conversion (int) : Elle dit "Transforme ce texte en un nombre entier (integer)". Si l'utilisateur tape "5", Python reçoit le nombre 5 (mathématique), pas le texte "5".
-Filtrage (Sécurité) : C'est le plus important. Si l'utilisateur tape quelque chose qui n'est pas un nombre (par exemple /api/welcome/toto), Flask refusera la connexion (Erreur 404) avant même de lancer votre fonction. Cela protège votre code contre des erreurs.
+L'expression <int:index> :
+Elle dit "Tout ce qui est écrit à cet endroit précis de l'URL, mets-le dans une variable nommée index" et "Transforme ce texte en un nombre entier (integer)". Si l'utilisateur tape "5", Python reçoit le nombre 5 (mathématique), pas le texte "5".
+Si l'utilisateur tape quelque chose qui n'est pas un nombre (par exemple /api/welcome/toto), Flask refusera la connexion (Erreur 404) avant même de lancer notre fonction.
 
 ### 4.2. Première page REST
-On aperçcoit bien le welcom et le retour avec l'index :
+On aperçcoit bien le welcome et le retour avec l'index :
 
 <img width="578" height="66" alt="Screenshot 2025-12-08 at 3 02 59 PM" src="https://github.com/user-attachments/assets/8bdecfd9-d343-43bc-9755-3e3ca4dbd948" />
 
@@ -188,19 +197,19 @@ Comme on peut le voir, nos requêtes sont lu en html mais pas en JSON :
 <img width="1470" height="658" alt="image" src="https://github.com/user-attachments/assets/7d2ba4cd-0190-4c86-a455-c70ccde5778e" />
 
 
-Première route
+**Première route**
 
 Après l'ajout des lignes ... on obtient :
 
 <img width="1470" height="680" alt="image" src="https://github.com/user-attachments/assets/f39414a3-ba9d-4c20-ad4a-2e7f4e76a3dc" />
 
-Deuxième route 
+**Deuxième route** 
 
 On utilise ici jsonify et on voit que c'est bien détecter en JSON :
 
 <img width="1469" height="613" alt="image" src="https://github.com/user-attachments/assets/0120a5f3-5528-43d7-8e5d-b7d91b0ebbb7" />
 
-On implémente maintenant la page "error 404"
+**On implémente maintenant la page "error 404"**
 
 <img width="1470" height="702" alt="image" src="https://github.com/user-attachments/assets/85c13df9-d6fc-4dff-9e77-f74465df2aa2" />
 
@@ -208,17 +217,17 @@ Not allowed pour le moment
 
 <img width="574" height="108" alt="image" src="https://github.com/user-attachments/assets/4f1fa88c-93f4-427f-bab8-af7fb20d771e" />
 
-Méthode POST:
+**Méthode POST:**
 <img width="1370" height="333" alt="image" src="https://github.com/user-attachments/assets/4dc9677c-6408-4483-a57e-05179595efa7" />
 
-Méthode GET :
+**Méthode GET :**
 
 <img width="1470" height="643" alt="image" src="https://github.com/user-attachments/assets/1a4d72f9-f249-41c8-9f06-6ec5b067270a" />
 
-Suite méthode POST :
+**Suite méthode POST :**
 <img width="1370" height="994" alt="image" src="https://github.com/user-attachments/assets/30bc8888-6075-4b15-97a6-55dc47cba05a" />
 
-méthode :API CRUD
+**méthode :API CRUD**
 
 <img width="1370" height="852" alt="image" src="https://github.com/user-attachments/assets/61e4dfec-3552-4827-a9a9-3d0c1e9b9433" />
 
@@ -231,14 +240,15 @@ On peut tester nos méthodes HTTP :
 
 
 
-## 5. TP4 - Bus CAN
+##  TP4 - Bus CAN
 ### 5.1. Pilotage du moteur
 
 Pour avoir 500kbit/s : 
 
 <img width="810" height="286" alt="image" src="https://github.com/user-attachments/assets/1ed69093-f502-436e-8cfc-6e36bb2a40de" />
 
-```
+Commencez par mettre en place un code simple, qui fait bouger le moteur de 90° dans un sens, puis de 90° dans l'autre, avec une période de 1 seconde.
+```c
 	HAL_CAN_Start(&hcan1);
 
 	CAN_TxHeaderTypeDef TxHeader;
@@ -268,7 +278,7 @@ Pour avoir 500kbit/s :
 		HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxData, &TxMailbox);
 		HAL_Delay(1000);
 ```
-   On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
+On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion
 
 ## 6. TP5 - Rassemblement
    
