@@ -6,17 +6,19 @@ Objectif: Interfacer un STM32 avec des capteurs I2C
 
 À partir de la datasheet du [BMP280](https://moodle.ensea.fr/mod/resource/view.php?id=19907), identifiez les éléments suivants:
 
-###1. les adresses I²C possibles pour ce composant : Page 28 de la datasheet : On a 7 bits d'adresses dont 6 fixées 111011x. Le dernier bit correspond à la connexion avec SDO. Sur la carte on relève 0x77  donc le SDO est connecté au VDDIO et donc le dernier bit est à 1 donc on a 1110111.
+### 1.
+Les adresses I²C possibles pour ce composant :
+Page 28 de la datasheet : On a 7 bits d'adresses dont 6 fixées 111011x. Le dernier bit correspond à la connexion avec SDO. Sur la carte on relève 0x77  donc le SDO est connecté au VDDIO et donc le dernier bit est à 1 donc on a 1110111.
    
    
 ### 2.
 
-le registre et la valeur permettant d'identifier ce composant :
+Le registre et la valeur permettant d'identifier ce composant :
 Comme on peut le voir grâce à la Memory MAP, l'identification se trouve dans le registre "id" visible à l'adresse 0xD0
 
 ### 3. 
 
-le registre et la valeur permettant de placer le composant en mode normal
+le registre et la valeur permettant de placer le composant en mode normal :
 
 On peut activer / skipped la measure de la pression en écrivant dans le registre 0xF4 : osrs_t + osrs_p + mode
 Pour avoir une mesure de la température avec un oversampling de *1 , on met osrs_t = 0b001
@@ -29,13 +31,13 @@ les registres contenant l'étalonnage du composant :
    On lit l'adresse de calibration de 0xA1 à 0x88.
 
 ### 5.
-les registres contenant la température (ainsi que le format)
+les registres contenant la température (ainsi que le format) :
  <img width="1098" height="460" alt="image" src="https://github.com/user-attachments/assets/5d940431-123b-497b-a349-7d6bad3d244e" />
  On relève 0xFA et oxFB
 
 ### 6.
 
-les registres contenant la pression (ainsi que le format)
+les registres contenant la pression (ainsi que le format) :
 De même que pour la température, pour la pression il faudra lire les registres 0XF8 et 0xF7
 <img width="1110" height="494" alt="image" src="https://github.com/user-attachments/assets/ebcfc410-13e2-41a5-ab1f-3b527d708f36" />
 
@@ -73,10 +75,9 @@ Communication avec le BMP280
 Identification du BMP280
 
 L'identification du BMP280 consiste en la lecture du registre ID
-
 En I²C, la lecture se déroule de la manière suivante:
+envoyer l'adresse du registre ID :
 
-envoyer l'adresse du registre ID
 recevoir 1 octet correspondant au contenu du registre :
 ```c
 /* Private define ------------------------------------------------------------*/
@@ -111,12 +112,20 @@ Oui on le voit bien avec la memory map du dessus. C'est bien 0x58.
 
 **Configuration du BMP280**
 
+
+
 **TP2**
 
-
+**3.1. Mise en route du Raspberry PI Zéro**
 **Premier démarrage**
+(Notes à nous mêmes ) 
 ssh lemvoz@192.168.4.213
 mdp :lemvoz
+
+Raspberry configurée.
+Pour récupérer son adresse, il faut bien sûr se connecter au même wifi et avec un logiciel comme angry ip scanner, on peut regarder les IP sur le réseau.
+L'IP a été configurée de cette manière : 192.168.4 est l'identifiant du réseau et .213 c'est l'identifiant unique de notre raspberry.
+
 
 ### 3.2. Port Série
 Loopback
