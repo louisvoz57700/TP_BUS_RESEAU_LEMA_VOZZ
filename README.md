@@ -213,7 +213,7 @@ Elle dit "Tout ce qui est écrit à cet endroit précis de l'URL, mets-le dans u
 Si l'utilisateur tape quelque chose qui n'est pas un nombre (par exemple /api/welcome/toto), Flask refusera la connexion (Erreur 404) avant même de lancer notre fonction.
 
 ### 4.2. Première page REST
-On aperçcoit bien le welcome et le retour avec l'index :
+On aperçoit bien le welcome et le retour avec l'index :
 
 <img width="578" height="66" alt="Screenshot 2025-12-08 at 3 02 59 PM" src="https://github.com/user-attachments/assets/8bdecfd9-d343-43bc-9755-3e3ca4dbd948" />
 
