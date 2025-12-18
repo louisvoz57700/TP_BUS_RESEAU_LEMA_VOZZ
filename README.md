@@ -137,7 +137,9 @@ printf("RAW: T=%ld P=%ld | FINAL: T=%.2f C, P=%.2f hPa\r\n",raw_t, raw_p, comp_t
 **TP2**
 
 **3.1. Mise en route du Raspberry PI Zéro**
+
 **Premier démarrage**
+
 (Notes à nous mêmes ) 
 ssh lemvoz@192.168.4.213
 mdp :lemvoz
