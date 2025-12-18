@@ -1,5 +1,5 @@
 # TP_BUS_RESEAU_LEMA_VOZZ
-Voici le compte-rendu de nos TP en bus et réseau de Lemarignier et Vozzola
+Voici le compte-rendu de nos TP en bus et réseaux de Lemarignier et Vozzola
 ## **TP 1 - Bus I2C**
 
 Objectif: Interfacer un STM32 avec des capteurs I2C
