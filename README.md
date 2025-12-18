@@ -115,6 +115,23 @@ Oui on le voit bien avec la memory map du dessus. C'est bien 0x58.
 
 **Configuration du BMP280**
 
+La configuration se retrouve ici : https://github.com/louisvoz57700/TP_BUS_RESEAU_LEMA_VOZZ/blob/643206734aac2e1833452727166aa53dd605094a/Software/TP4_CAN/tp_bus_F446RE/Core/Src/BMP280.c
+
+Globalement, on initialise BMP280 et on lit les valeurs dans le while(1).
+```c
+BMP280_Init(&hi2c1);
+while (1){
+BMP280_Read_Raw(&hi2c1, &raw_p, &raw_t);
+
+// 2. Compensate (Temp FIRST)
+comp_t = bmp280_compensate_T_int32(raw_t);
+comp_p = bmp280_compensate_P_int64(raw_p);
+
+// 3. Print (Raw & Readable)
+//datasheet page 22, division par 100 pour la température et 25600 pour pression
+printf("RAW: T=%ld P=%ld | FINAL: T=%.2f C, P=%.2f hPa\r\n",raw_t, raw_p, comp_t / 100.0f, comp_p / 25600.0f);
+}
+```
 
 
 **TP2**
@@ -163,7 +180,9 @@ void PARSE(uint8_t* buffer, uint8_t size)
 	}
 }
 ```
-Petite photo des valeurs que nous obtenons, ici en brut mais pour les prochains TP, les valeurs compensées.  
+Petite photo des valeurs que nous obtenons, ici en brut mais pour les prochains TP, les valeurs compensées :
+<img width="1511" height="714" alt="image" src="https://github.com/user-attachments/assets/817c3f6b-31f5-4b93-8f6a-1bb69971f663" />
+
 ### TP3 - Interface REST
 
 **Premier fichier Web**
