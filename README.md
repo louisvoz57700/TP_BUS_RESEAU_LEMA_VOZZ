@@ -298,5 +298,4 @@ Lorsqu'on appuie sur le bouton "Get Temperature", on va envoyer au STM32 GET_T e
 
 <img width="1705" height="849" alt="image" src="https://github.com/user-attachments/assets/640c5225-2e94-4002-89fb-e3b9c2156801" />
 
-Pour voir si notre programme python marche bien, nous avons aussi utilisé POSTMAN pour tout tester :
 
