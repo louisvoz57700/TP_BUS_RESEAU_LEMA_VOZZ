@@ -308,7 +308,10 @@ On utilisera cette datasheet : https://github.com/louisvoz57700/TP_BUS_RESEAU_LE
 On fera attention à se mettre en bout de ligne et prendre 120 ohms sinon on aura des problèmes de réflexion.
 
 **5.2. Interfaçage avec le capteur**
+On reprend le code qu'on avait fait pour lire les valeurs de la température et on crée une fonction  process_temperature qui prend en argument la température lut. On garde en mémoire la denière position et on la compare avec la nouvelle position. Cette différence sera appelé step, si step est positif on tourne dans un sens, sinon dans l'autre et le nombre de step, dépend de la différence de température, on se basera sur le graphique suivant : 
+![WhatsApp Image 2025-12-18 à 14 08 34_1a0db8f0](https://github.com/user-attachments/assets/55a3fcd5-7c1b-486f-a970-91e356fc3e10)
 
+Voici une vidéo du fonctionnement :
 https://github.com/user-attachments/assets/54dca179-4a62-4eaa-8a0a-a004caa852ee
 
 
